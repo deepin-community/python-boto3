@@ -1,0 +1,29 @@
+Source: python-boto3
+Section: python
+Priority: optional
+Maintainer: Debian Cloud Team <debian-cloud@lists.debian.org>
+Uploaders: Alexander GQ Gerasiov <gq@debian.org>,
+           Noah Meyerhans <noahm@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               dh-python,
+	       python3-all:any,
+               python3-s3transfer (>= 0.1.10),
+               python3-setuptools
+Standards-Version: 4.6.0
+Homepage: https://github.com/boto/boto3
+Vcs-Git: https://salsa.debian.org/cloud-team/python-boto3.git
+Vcs-Browser: https://salsa.debian.org/cloud-team/python-boto3
+
+Package: python3-boto3
+Architecture: all
+Depends: python3-botocore (>= 1.6.6),
+         python3-requests,
+         python3-s3transfer (>= 0.1.10),
+         python3-six,
+         ${misc:Depends},
+         ${python3:Depends}
+Description: Python interface to Amazon's Web Services - Python 3.x
+ Boto is the Amazon Web Services interface for Python.  It allows developers
+ to write software that makes use of Amazon services like S3 and EC2. Boto
+ provides an easy to use, object-oriented API as well as low-level direct
+ service access.
